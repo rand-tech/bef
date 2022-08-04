@@ -14845,7 +14845,7 @@ class Ret2dlHintCommand(GenericCommand):
         s += "\n"
         s += "\n"
         s += "  _dl_runtime_resolve@.plt.got(link_map, reloc_arg)\n"
-        s += "    -> _dl_fix_up@ld(link_map, reloc_arg)\n"
+        s += "    -> _dl_fixup@ld(link_map, reloc_arg)\n"
         s += "                                   |\n"
         s += "                                   |\n"
         if is_32bit():
