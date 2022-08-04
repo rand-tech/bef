@@ -7,7 +7,7 @@ fi
 
 echo "[+] apt"
 apt-get update
-apt-get install -y gdb-multiarch python3-pip binutils gcc
+apt-get install -y gdb-multiarch python3-pip binutils gcc file git
 
 echo "[+] pip3"
 pip3 install rpyc psutil py-timeout

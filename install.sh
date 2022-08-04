@@ -7,7 +7,7 @@ fi
 
 echo "[+] apt"
 apt-get update
-apt-get install -y gdb-multiarch python3-pip binutils gcc ruby-dev
+apt-get install -y gdb-multiarch python3-pip binutils gcc ruby-dev file git
 
 echo "[+] pip3"
 pip3 install rpyc psutil crccheck unicorn capstone ropper keystone-engine py-timeout
