@@ -6787,8 +6787,12 @@ class SearchPatternCommand(GenericCommand):
 
             for match in re.finditer(pattern, mem):
                 start = chunk_addr + match.start()
-                ustr = gef_pystring(pattern)
-                end = start + len(pattern.decode("unicode-escape"))
+                if is_ascii_string(start):
+                    ustr = read_ascii_string(start) or ""
+                    end = start + len(ustr)
+                else:
+                    ustr = gef_pystring(pattern)
+                    end = start + len(pattern.decode("unicode-escape"))
                 locations.append((start, end, ustr))
             del mem
         return locations
